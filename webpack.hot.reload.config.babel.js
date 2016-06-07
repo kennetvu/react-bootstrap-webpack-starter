@@ -8,7 +8,7 @@ const assetsDir = path.resolve(__dirname, 'public/assets');
 let config = {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:3001',
     'webpack/hot/only-dev-server',
     path.resolve(__dirname, 'src/app/index.js')
   ],

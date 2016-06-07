@@ -7,10 +7,11 @@ import config             from './webpack.hot.reload.config.babel';
 new WebpackDevServer(webpack(config), {
   publicPath          : config.output.publicPath,
   hot                : true,
-  historyApiFallback : true
-}).listen(3000, 'localhost', (err) => {
+  historyApiFallback : true,
+  headers: { 'Access-Control-Allow-Origin': '*' }
+}).listen(3001, 'localhost', (err) => {
   if (err) {
     console.log(err);
   }
-  console.log('Listening at localhost:3000');
+  console.log('Listening at localhost:3001');
 });
